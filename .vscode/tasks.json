@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build reverse agent console project",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -14,14 +14,14 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "watch",
+            "label": "build reverse agent webapi project",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "watch",
-                "run",
-                "--project",
-                "${workspaceFolder}/DotnetConf2025Demo.sln"
+                "build",
+                "${workspaceFolder}/DotnetConf2025Demo.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
             "problemMatcher": "$msCompile"
         }

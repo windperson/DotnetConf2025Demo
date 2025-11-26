@@ -1,0 +1,12 @@
+POST http://localhost:5226/v1/chat/completions
+Content-Type: application/json
+
+{
+  "model": "reverse-agent",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello, how are you?"
+    }
+  ]
+}

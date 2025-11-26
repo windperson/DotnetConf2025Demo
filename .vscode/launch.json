@@ -5,10 +5,10 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
-            "name": "Simple Reverse Agent (console)",
+            "name": "Reverse Agent (console)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build reverse agent console project",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/SimpleReverseInputAgentDemo/ConsoleDemo/bin/Debug/net8.0/ConsoleDemo.dll",
             "args": [],
@@ -16,6 +16,23 @@
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "externalTerminal",
             "stopAtEntry": false
+        },
+        {
+            "name":  "Reverse Agent (webapi)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build reverse agent webapi project",
+            "program": "${workspaceFolder}/SimpleReverseInputAgentDemo/OpenAICompatibleWebApiDemo/bin/Debug/net8.0/OpenAICompatibleWebApiDemo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SimpleReverseInputAgentDemo/OpenAICompatibleWebApiDemo",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
         },
         {
             "name": ".NET Core Attach",
