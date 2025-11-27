@@ -9,7 +9,6 @@
   <ItemGroup>
     <PackageReference Include="AutoGen.LMStudio" Version="0.2.3" />
     <PackageReference Include="AutoGen.OpenAI" Version="0.2.3" />
-    <PackageReference Include="OpenAI" Version="2.7.0" />
   </ItemGroup>
 
 </Project>

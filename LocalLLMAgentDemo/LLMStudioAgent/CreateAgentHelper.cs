@@ -9,7 +9,7 @@ namespace LLMStudioAgent;
 public static class CreateAgentHelper
 {
     // ReSharper disable once InconsistentNaming
-    public static IAgent CreateLMStudioAgent(string agentName, string modelName,
+    public static IStreamingAgent CreateLMStudioAgent(string agentName, string modelName,
         string systemPrompt = "",
         string lmStudioEndpoint = "http://localhost:1234/v1")
     {
@@ -24,7 +24,8 @@ public static class CreateAgentHelper
             ? new OpenAIChatAgent(chatClient: chatClient, agentName)
             : new OpenAIChatAgent(chatClient: chatClient, agentName, systemPrompt);
 
-        localAgent.RegisterMessageConnector()
+        localAgent
+            .RegisterMessageConnector()
             .RegisterPrintMessage();
 
         return localAgent;
