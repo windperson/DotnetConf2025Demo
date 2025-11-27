@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDemo", "LocalLLMAgen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserProxyAgentDemo", "LocalLLMAgentDemo\UserProxyAgentDemo\UserProxyAgentDemo.csproj", "{5850EC8F-0D43-40B5-8385-CC8EA7621CA9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultipleAgents", "MultipleAgents", "{46A81AF0-1EAB-4784-AFE2-37F625FDFF7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeacherStudentTutoring", "MultipleAgents\TeacherStudentTutoring\TeacherStudentTutoring.csproj", "{BE8B209E-C483-44BE-A1B7-C431796285AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +46,10 @@ Global
 		{5850EC8F-0D43-40B5-8385-CC8EA7621CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5850EC8F-0D43-40B5-8385-CC8EA7621CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5850EC8F-0D43-40B5-8385-CC8EA7621CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8B209E-C483-44BE-A1B7-C431796285AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8B209E-C483-44BE-A1B7-C431796285AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8B209E-C483-44BE-A1B7-C431796285AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8B209E-C483-44BE-A1B7-C431796285AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{EB5F6801-9938-40BB-954D-8BC36ED5BBFF} = {456ECBCF-9F66-D03A-8EE6-2CCE4978B4E3}
 		{164D09F0-E34F-42A2-8EAE-CD3D34D0E127} = {742DDCBC-445E-4EFA-9F5B-E3CF91D6A21D}
 		{5850EC8F-0D43-40B5-8385-CC8EA7621CA9} = {742DDCBC-445E-4EFA-9F5B-E3CF91D6A21D}
+		{BE8B209E-C483-44BE-A1B7-C431796285AE} = {46A81AF0-1EAB-4784-AFE2-37F625FDFF7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61B5B689-22E7-4E60-BBD1-32A0FAF87026}
