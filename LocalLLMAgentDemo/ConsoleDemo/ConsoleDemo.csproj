@@ -12,8 +12,4 @@
 		<PackageReference Include="AutoGen.Core" Version="0.2.3" />
 	</ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\LLMStudioAgent\LLMStudioAgent.csproj" />
-    </ItemGroup>
-
 </Project>

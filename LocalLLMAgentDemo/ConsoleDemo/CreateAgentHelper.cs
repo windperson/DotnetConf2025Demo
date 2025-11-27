@@ -4,13 +4,12 @@ using AutoGen.OpenAI;
 using AutoGen.OpenAI.Extension;
 using OpenAI;
 
-namespace LLMStudioAgent;
+namespace ConsoleDemo;
 
 public static class CreateAgentHelper
 {
-    // ReSharper disable once InconsistentNaming
     public static IStreamingAgent CreateLMStudioAgent(string agentName, string modelName,
-        string systemPrompt = "",
+        string systemMessage = "",
         string lmStudioEndpoint = "http://localhost:1234/v1")
     {
         var openAiClient = new OpenAIClient(new ApiKeyCredential("api-key"), new OpenAIClientOptions
@@ -20,12 +19,12 @@ public static class CreateAgentHelper
 
         var chatClient = openAiClient.GetChatClient(modelName);
 
-        var localAgent = string.IsNullOrEmpty(systemPrompt)
+        var localAgent = string.IsNullOrEmpty(systemMessage)
             ? new OpenAIChatAgent(chatClient: chatClient, agentName)
-            : new OpenAIChatAgent(chatClient: chatClient, agentName, systemPrompt);
+            : new OpenAIChatAgent(chatClient: chatClient, agentName, systemMessage);
 
         localAgent
-            .RegisterMessageConnector()
+            .RegisterMessageConnector(new OpenAIChatRequestMessageConnector())
             .RegisterPrintMessage();
 
         return localAgent;
